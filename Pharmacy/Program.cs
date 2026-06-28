@@ -10,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<PharmacyDbContext>(options => options.UseSqlite("Data Source=Database//Pharmacy.db"));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
